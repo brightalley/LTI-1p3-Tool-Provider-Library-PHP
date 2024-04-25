@@ -1,10 +1,11 @@
 {
-  "name": "longhornopen/lti",
+  "name": "brightalley/lti-1p3",
+  "version": "dev-master",
   "description": "PHP class library for building LTI integrations",
   "keywords": ["LTI"],
-  "homepage": "https://github.com/celtic-project/LTI-PHP",
   "type": "library",
   "license": "LGPL-3.0-or-later",
+  "minimum-stability": "dev",
   "require": {
     "php": ">=8.1",
     "firebase/php-jwt": "^6.8",
