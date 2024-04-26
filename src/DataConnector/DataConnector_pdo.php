@@ -772,7 +772,7 @@ EOD;
             }
             $resourceLink->setSettings($settings);
             if (!is_null($row['primary_resource_link_pk'])) {
-                $resourceLink->primaryResourceLinkId = intval($row['primary_resource_link_pk']);
+                $resourceLink->primaryResourceLinkId = strval($row['primary_resource_link_pk']);
             } else {
                 $resourceLink->primaryResourceLinkId = null;
             }
@@ -1772,6 +1772,10 @@ EOD;
     {
         try {
             $ok = $query->execute();
+
+            if (class_exists('\Illuminate\Support\Facades\DB') && \Illuminate\Support\Facades\DB::transactionLevel() > 0) {
+                \Illuminate\Support\Facades\DB::commit();
+            }
         } catch (\PDOException $e) {
             $ok = false;
         }
