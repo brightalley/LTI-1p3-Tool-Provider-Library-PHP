@@ -9,7 +9,7 @@
   "require": {
     "ext-pdo": "*",
     "php": ">=8.1",
-    "firebase/php-jwt": "^6.8",
+    "firebase/php-jwt": "^6.8 || ^7.0",
     "laravel/framework": "*"
   },
   "autoload": {
